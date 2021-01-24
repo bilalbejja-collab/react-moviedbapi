@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alf lila w lila",
+        "nota": "9",
+        "texto": "Es buena peli. La recomiendo"
+    },
+    {
+        "id": 2,
+        "nombre": "Classe 8",
+        "nota": "10",
+        "texto": "Toop"
+    }
+]
