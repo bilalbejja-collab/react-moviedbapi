@@ -110,6 +110,7 @@ export function MovieDetail({ match }) {
     );
   };
 
+  //Devuelve la lista de géneros
   let genresList;
   if (genres) {
     genresList = genres.map((g, i) => {
@@ -123,6 +124,7 @@ export function MovieDetail({ match }) {
     });
   }
 
+  //Devuelve la lista de actores
   const castList = casts.slice(0, 4).map((c, i) => {
     return (
       <div className="col-md-3 text-center" key={i}>
@@ -142,6 +144,7 @@ export function MovieDetail({ match }) {
     );
   });
 
+  //Devuelve de la lista de las películas simulares
   const similarMovieList = similarMovie.slice(0, 4).map((item, index) => {
     return (
       <div className="col-md-3 col-sm-6" key={index}>
@@ -162,11 +165,6 @@ export function MovieDetail({ match }) {
       </div>
     );
   });
-
-  function getComents(){
-    //CommentDB->getComents();
-    return "BILAL\nBEJJA";
-  }
 
   //Redirecciona a la página principal
   function handleRedirect() {
@@ -290,9 +288,9 @@ export function MovieDetail({ match }) {
 
       <div className="col text-center" style={{ width: "100%" }}>
         <div class="d-flex justify-content-center">
-          <button type="button" onClick={() => document.getElementById("comments").innerText = getComents()} class="btn btn-warning" style={{ width: "200px" }}>Show Comments</button>
+          <button type="button" onClick={() => document.getElementById("comments").innerText = "Comment1\nComment2"} class="btn btn-warning" style={{ width: "200px" }}>Show Comments</button>
         </div>
-        <div id="comments" placeholder="<?php echo 'Bilal' ?>"></div>
+        <div id="comments"></div>
       </div>
 
       <br />

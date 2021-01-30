@@ -8,6 +8,7 @@ const genreUrl = `${url}/genre/movie/list`;
 const moviesUrl = `${url}/discover/movie`;
 const personUrl = `${url}/trending/person/week`;
 
+// Devuelve los géneros
 export const fetchGenre = async () => {
     try {
         const { data } = await axios.get(genreUrl, {
@@ -25,6 +26,7 @@ export const fetchGenre = async () => {
     } catch (error) { }
 }
 
+// Devuelve peli por su ID
 export const fetchMovieByGenre = async (genre_id) => {
     try {
         const { data } = await axios.get(moviesUrl, {
@@ -50,6 +52,7 @@ export const fetchMovieByGenre = async (genre_id) => {
     } catch (error) { }
 }
 
+// Devuelve las personas más populares  
 export const fetchPersons = async () => {
     try {
         const { data } = await axios.get(personUrl, {
@@ -68,6 +71,7 @@ export const fetchPersons = async () => {
     } catch (error) { }
 }
 
+// Devuelve las pelis más populares
 export const fetchTopratedMovie = async () => {
     try {
         const { data } = await axios.get(topratedUrl, {
@@ -94,6 +98,7 @@ export const fetchTopratedMovie = async () => {
     }
 }
 
+// Devuelve los detalles de una peli
 export const fetchMovieDetail = async (id) => {
     try {
         const { data } = await axios.get(`${movieUrl}/${id}`, {
@@ -106,6 +111,7 @@ export const fetchMovieDetail = async (id) => {
     } catch (error) { }
 }
 
+// Devuelve los videos correspondientes a una peli por su ID
 export const fetchMovieVideos = async (id) => {
     try {
         const { data } = await axios.get(`${movieUrl}/${id}/videos`, {
@@ -117,6 +123,7 @@ export const fetchMovieVideos = async (id) => {
     } catch (error) { }
 }
 
+// Devuelve los actores de una peli por id
 export const fetchCasts = async (id) => {
     try {
         const { data } = await axios.get(`${movieUrl}/${id}/credits`, {
@@ -135,6 +142,7 @@ export const fetchCasts = async (id) => {
     } catch (error) { }
 }
 
+// Devuelve pelis similares a la actual
 export const fetchSimilarMovie = async (id) => {
     try {
         const { data } = await axios.get(`${movieUrl}/${id}/similar`, {

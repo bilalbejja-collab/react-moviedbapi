@@ -4,8 +4,7 @@ import {
   fetchMovieByGenre,
   fetchPersons,
   fetchTopratedMovie,
-} from "../../service";
-//import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+} from "../../service"; 
 import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 

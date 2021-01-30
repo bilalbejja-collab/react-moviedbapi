@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nombre": "Greenland",
+        "nota": "9",
+        "texto": "Es buena peli. La recomiendo"
+    },
+    {
+        "id": 2,
+        "nombre": "Avengers: Endgame",
+        "nota": "10",
+        "texto": "Toop"
+    }
+]
